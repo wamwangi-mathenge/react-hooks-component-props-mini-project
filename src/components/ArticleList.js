@@ -1,10 +1,14 @@
 import React from "react";
-import article from "./Article";
+import Article from "./Article";
 
-function ArticleList() {
-    <main>
+function ArticleList(articles) {
+    const articleElement = articles.map((article) => {
+        return (
+            <Article key={article.id} title={article.title} date={article.date} preview={article.preview} minutes={article.minutes} />
+        )
+    })
 
-    </main>
+    return <main>{articleElement}</main>
 }
 
 export default ArticleList;
