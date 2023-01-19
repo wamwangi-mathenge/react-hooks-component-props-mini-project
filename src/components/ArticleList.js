@@ -4,7 +4,13 @@ import Article from "./Article";
 function ArticleList(articles) {
     const articleElement = articles.map((article) => {
         return (
-            <Article key={article.id} title={article.title} date={article.date} preview={article.preview} minutes={article.minutes} />
+            <Article 
+                key={article.id} 
+                title={article.title} 
+                date={article.date} 
+                preview={article.preview} 
+                minutes={article.minutes} 
+            />
         )
     })
 
